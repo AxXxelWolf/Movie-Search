@@ -2,12 +2,14 @@ const axios = require("axios");
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
 app.use(cors());
-const port = 3000; // Use the port you prefer
+const port = 3000;
 
 app.get("/search", async (req, res) => {
   const { query } = req.query;
-  const apiKey = "52c0f60e0ba0d8d7b35e7e7300515a86";
+  const apiKey = process.env.TMDB_API_KEY; // Use the environment variable
   const apiUrl = `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${apiKey}`;
 
   try {
