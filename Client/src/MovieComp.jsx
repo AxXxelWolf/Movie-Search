@@ -6,7 +6,6 @@ export default function MovieComp({ title, date, desc, imgUrl }) {
 
   return (
     <div className="movie-card">
-      {/* Rest of your component */}
       <div className="img-card">
         <img src={imgUrl} alt={title} />
       </div>

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Search from "./Search";
 import MovieComp from "./MovieComp";
 import { fetchMovieData } from "./MovieData";
-import "./App.css"; // Import your styles
+import "./App.css";
 
 function App() {
   const [movieData, setMovieData] = useState([]);
