@@ -1,8 +1,14 @@
 import { useState } from "react";
 import "./Search.css";
 
-export default function Search() {
+export default function Search({ onSearch }) {
   const [newName, setNewName] = useState("");
+
+  const handleSearchClick = () => {
+    console.log("sending search");
+    onSearch(newName);
+  };
+
   return (
     <div>
       <div className="Search-header">
@@ -25,7 +31,9 @@ export default function Search() {
             value={newName}
           />
 
-          <button className="Sbtn">Search</button>
+          <button className="Sbtn" onClick={handleSearchClick}>
+            Search
+          </button>
         </div>
       </div>
     </div>

@@ -1,0 +1,10 @@
+/* App.css */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* This creates 3 equal-width columns */
+  gap: 20px; /* Adjust the gap between components as needed */
+  margin: 30px;
+}
